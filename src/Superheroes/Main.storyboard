@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <pickerView contentMode="scaleToFill" id="197" translatesAutoresizingMaskIntoConstraints="NO" verticalCompressionResistancePriority="250">
+                                <rect key="frame" x="47" y="40" width="320" height="216"/>
+                            </pickerView>
+                            <pickerView contentMode="scaleToFill" id="198" translatesAutoresizingMaskIntoConstraints="NO" verticalCompressionResistancePriority="250">
+                                <rect key="frame" x="47" y="276" width="320" height="216"/>
+                            </pickerView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="199" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="154" y="512" width="106" height="30"/>
+                                <state key="normal" title="Fight"/>
+                                <constraints>
+                                    <constraint id="1078" firstAttribute="width" constant="106"/>
+                                </constraints>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pick a hero and villain and tap Fight" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="207" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="72" y="562" width="270" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                                <accessibility key="accessibilityConfiguration" identifier="ResultLabel"/>
+                            </label>
+                        </subviews>
+                        <constraints>
+                            <constraint id="200" firstAttribute="centerX" secondItem="197" secondAttribute="centerX"/>
+                            <constraint id="201" firstItem="197" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20"/>
+                            <constraint id="203" firstItem="198" firstAttribute="top" secondItem="197" secondAttribute="bottom" constant="20"/>
+                            <constraint id="204" firstItem="198" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX"/>
+                            <constraint id="205" firstItem="199" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX"/>
+                            <constraint id="206" firstItem="199" firstAttribute="top" secondItem="198" secondAttribute="bottom" constant="20"/>
+                            <constraint id="208" firstItem="207" firstAttribute="top" secondItem="199" secondAttribute="bottom" constant="20"/>
+                            <constraint id="209" firstItem="207" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX"/>
+                            <constraint id="2149" firstItem="wfy-db-euE" firstAttribute="top" secondItem="207" secondAttribute="bottom" constant="20" relation="greaterThanOrEqual"/>
+                            <constraint id="2374" firstAttribute="trailingMargin" secondItem="197" secondAttribute="trailing" relation="greaterThanOrEqual"/>
+                            <constraint id="2375" firstItem="197" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" relation="greaterThanOrEqual"/>
+                            <constraint id="2376" firstItem="198" firstAttribute="leading" secondItem="197" secondAttribute="leading"/>
+                            <constraint id="2377" firstItem="198" firstAttribute="trailing" secondItem="197" secondAttribute="trailing"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="HeroPicker" destination="197" id="name-outlet-197"/>
+                        <outlet property="VillainPicker" destination="198" id="name-outlet-198"/>
+                        <outlet property="SubmitButton" destination="199" id="name-outlet-199"/>
+                        <outlet property="ResultLabel" destination="207" id="name-outlet-207"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="0.0" y="0.0"/>
+        </scene>
+    </scenes>
+</document>
